@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/style.css">
+  <style media="screen">
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    .form {
+      background-color: white;
+      width: 400px;
+      border-radius: 8px;
+      padding: 20px 40px;
+      box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+
+
+    }
+
+    .title {
+      font-size: 40px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    #submitBtn {
+      display: block;
+      margin-left: auto;
+      padding: 15px 30px;
+      border: none;
+      background-color: purple;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+
+    #submitBtn:hover {
+      background-color: #9867C5;
+      transform: translateY(-2px);
+    }
+
+
+    .form-control:focus+.label {
+      top: -7px;
+      left: 3px;
+      z-index: 10;
+      font-size: 14px;
+      font-weight: 600;
+      color: purple;
+    }
+
+    .form-control:focus {
+      border: 2px solid purple;
+    }
+
+    .form-control:not(:placeholder-shown)+.label {
+      top: -7px;
+      left: 3px;
+      z-index: 10;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container" class="container">
+
+    <form class="form" action="/register" method="POST">
+      <h1 class="title" style="text-align:center">Sign up here!</h1>
+      <div class="form-group mb-3">
+        <label class="label">Name</label>
+        <input type="text" class="form-control" placeholder="First name" name="firstName">
+      </div>
+      <div class="form-group mb-3">
+        <label class="label">Last name</label>
+        <input type="text" class="form-control" placeholder="Last name" name="lastName">
+      </div>
+      <div class="form-group mb-3">
+        <label class="label">Username</label>
+        <input type="text" class="form-control" placeholder="Username" name="userName">
+      </div>
+      <div class="form-group mb-3">
+        <label class="label">Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="password">
+      </div>
+      <div class="d-grid mt-3">
+        <button id="submitBtn" type="submit" class="btn btn-primary form-control">Sign up</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
